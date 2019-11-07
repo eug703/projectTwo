@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataType){
     var User = sequelize.define("User",{
         id:{
-            type: DataType.INTEGER(11),
+            type: DataType.INTEGER,
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
@@ -41,9 +41,11 @@ module.exports = function(sequelize, DataType){
             }
         },
         birthday: DataType.DATE
-    })
+    });
+
     User.associate = function(models){
         User.hasMany(models.Survey_Answers);
-    }
+    };
+
     return User;
-}
+};
