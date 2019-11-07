@@ -1,30 +1,33 @@
 <!doctype html>
 <html lang="en">
-    <head>
+    <head> 
         <link rel="stylesheet" href="style.css">
         <!--Bootstrap Link-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- jQuery References -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <title> date night Sign-in</title>
+        <title> Date Night Sign-in</title>
     </head>
     <body>
-        <h1 class="text-center display-1 m-3">Date night</h1>
+        <h1 class="text-center display-1 m-6">Date night</h1>
         <div class ="container">
             <div class = "row">
-                <div class="col-3"></div>
+                <div class="col-12"></div>
                 <div class = "col-6">
-                    <div class="w-100 badge-primary pl-3"> User Login </div>
+                    <div class="w-100 badge-primary pl-6"> User Login </div>
                     <form action="index.html" class="mb-4 bg-light border border-primary">
                         <div class="m-4">
                             <label for="user-name"> User Name : </label>
                             <input type="text" id="user-name" class="form-control">
+                            <label for="date-of-birth"> Date of birth : </label>
+                            <input type="date-of-birth" id="date-of-birth" class="form-control">
                             <label for="password"> Password : </label>
                             <input type="password" id="password" class="form-control">
+                            <label for="confirm-password"> Confirm Password : </label>
+                            <input type="confirm-password" id="confirm-password" class="form-control">
                             <hr>
-                            <button class="btn bg-primary text-light btn-default" id="user-login" type="submit">Log In</button>
-                            <a href="userSignUp.html" class="ml-3">Don't have an account? Sign up here.</a>
+                            <button class="btn bg-primary text-light btn-default" id="user-login" type="submit">sign up</button>
                         </div>
                     </form>
                 </div>
