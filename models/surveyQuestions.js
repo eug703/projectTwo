@@ -1,22 +1,20 @@
 module.exports = function(sequelize, DataType){
-    var Survey_Line = sequelize.define("survey_line",{
+    var Survey_Questions = sequelize.define("Survey_Questions",{
         id:{
-            type: DataType.INTEGER(11),
+            type: DataType.INTEGER,
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
         },
-        survey_name:{
+        question:{
             type: DataType.STRING,
-            allowNull: False
-        },
-        surveyId:{
-            type: DataType.INTEGER
+            allowNull: false
         }
-    })
-    Survey_Line.associate = function(models){
-        Survey_Line.belongsTo(models.Survey);
-        Survey.hasMany(models.Survey_Answers);
-    }
-    return Survey_Line;
-}
+    });
+
+    Survey_Questions.associate = function(models){
+        Survey_Questions.belongsTo(models.Survey);
+    };
+
+    return Survey_Questions;
+};
