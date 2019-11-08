@@ -27,6 +27,14 @@ app.get("/api/user/:key", function(req, res){
         res.json(data);
     });
 });
+//
+app.get("/signup", function(req, res){
+    res.render('signup')
+})
+app.get("/survey", function(req, res){
+    res.render('survey')
+})
+
 
 // Create a user
 app.post("/api/user", function(req, res){
