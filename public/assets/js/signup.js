@@ -8,26 +8,19 @@ $(document).ready(function(){
             return false;
     };
 
-    // A function for creating an author. Calls getAuthors upon completion
+    // A function for generating a post method to a user
     function postUser(userData) {
-        $.post("/api/user", userData)
-        .then(function(result){
-            console.log("User has been created succesfully ! ");
-            console.log(result);
-        });
-    };
-
-    // Post to the DB to check if the username exists
-    function queryUser(userName){
-        $.get("/api/user/" + userName, function(data){
-            if(data == "")
-                return false;
-            else
-                return true;
-        })
-        .then(function(result){
-            console.log(result);
-        });
+        try{
+            $.post("/api/user", userData)
+            .then(function(error, result){
+                // console.log("User has been created succesfully ! ");
+                // console.log(result);
+                console.log(error);
+                console.log(result);
+            });
+        } catch(err){
+            console.log("I am here at the error on the client side!");
+        };        
     };
 
     //Handles the sign-up validation
@@ -37,47 +30,31 @@ $(document).ready(function(){
         var firstNameInput = $("#first-name").val().trim();
         var lastNameInput = $("#last-name").val().trim();
         var passwordInput = $("#password").val().trim();
-        var passwordCheckInput = $("#password-check").val().trim();
+        var passwordCheckInput = $("#confirm-password").val().trim();
         var dateOfBirth = $("#date-of-birth").val().trim();
 
         if(passwordValid(passwordInput,passwordCheckInput)){
                 var usernameEntered = $("#user-name").val().trim();
                 console.log("I am here at the password valid field !");
                 console.log('usernameEntered',usernameEntered);
-                // Check to see if the current username exists in the database
-                // Query the database with a where clause of the username
-                // If the query is empty proceed to the insert
-                // Else return a validation error
-
-                if(queryUser(usernameEntered)){
-                    // $(".signup-validation").text("Username already exists !");
-                }
-                else {
+                // Creates a new user in the database
                     var user = {
                     userName: userNameInput,
                     firstName: firstNameInput,
                     lastName: lastNameInput,
                     password: passwordInput,
                     dateOfBirth: dateOfBirth};
-                    
+                    // Console logs the current user object for sanity checking
                     console.log("I am user-name");
                     console.log(user);
-
-                    try{
-                        postUser(user)
-                    } catch(err){
-                        console.log(err);
-                    };
-
-                    window.location.href="index.html";
-                };   
+                    postUser(user);                    
+                    window.location.href="../index.html";
         }else{
-            // $(".signup-validation").text("The Password entered does not match the check password !");
+            $(".signup-validation").text("The Password entered does not match the confirm password.");
         };
-
     };
 
-    $("#submit-user").on("click", function(){
+    $("#user-signup").on("click", function(){
         event.preventDefault();
         handleSignUp();
     });

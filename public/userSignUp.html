@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head> 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <!--Bootstrap Link-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -19,21 +19,26 @@
                     <form action="index.html" class="mb-4 bg-light border border-primary">
                         <div class="m-4">
                             <label for="user-name"> User Name : </label>
-                            <input type="text" id="user-name" class="form-control">
+                            <input type="text" id="user-name" name = "username" class="form-control">
+                            <label for="first-name"> First Name : </label>
+                            <input type="text" id="first-name" name = "firstname" class="form-control">
+                            <label for="last-name"> Last Name : </label>
+                            <input type="text" id="last-name" name = "lastname" class="form-control">
                             <label for="date-of-birth"> Date of birth : </label>
-                            <input type="date-of-birth" id="date-of-birth" class="form-control">
+                            <input type="date" id="date-of-birth" name = "dob" class="form-control">
                             <label for="password"> Password : </label>
-                            <input type="password" id="password" class="form-control">
+                            <input type="password" id="password" name = "password" class="form-control">
                             <label for="confirm-password"> Confirm Password : </label>
-                            <input type="confirm-password" id="confirm-password" class="form-control">
+                            <input type="password" id="confirm-password" class="form-control">
+                            <div class = "login-validation"></div>
                             <hr>
-                            <button class="btn bg-primary text-light btn-default" id="user-login" type="submit">sign up</button>
+                            <button class="btn bg-primary text-light btn-default" id="user-signup" type="submit">sign up</button>
                         </div>
                     </form>
                 </div>
                 <div class="col-3"></div>
             </div>
         </div>
-        <script type="text/javascript" src="asset\js\signup.js"></script>
+        <script type="text/javascript" src="./assets/js/signup.js"></script>
     </body>
 </html>

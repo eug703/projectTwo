@@ -1,5 +1,14 @@
 var db = require("../models");
 module.exports = function(app){
+// LOGIN RUTES
+app.get("/api/login/:username",function(req,res){
+    db.User.findAll({
+        where : {username : req.params.username}
+    }).then(function(data){
+        res.json(data);
+    });
+});
+
 // SURVEY ROUTES
 // all surveys
 app.get("/api/survey", function(req, res){
@@ -30,14 +39,20 @@ app.get("/api/user/:key", function(req, res){
 
 // Create a user
 app.post("/api/user", function(req, res){
+    console.log("This is the req console log : ");
+    console.log(req.body);
     db.User.create({ 
-            username: req.body.username,
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
+            username: req.body.userName,
+            first_name: req.body.firstName,
+            last_name: req.body.lastName,
             password: req.body.password,
-            date_of_birth: req.body.date_of_birth
+            birthday: req.body.dateOfBirth
     }).then(function(data){
         res.json(data);
+    }).catch(function(err){
+        console.log("Here is the error section at routes!");
+        throw err;
     });
 });
-}
+
+};
