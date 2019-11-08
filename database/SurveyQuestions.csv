@@ -1,4 +1,5 @@
-﻿1,1,Are you looking for something casual or serious?,Casual,Serious
+﻿id,survey_id,question,lower_bount_text,upper_bound_text
+1,1,Are you looking for something casual or serious?,Casual,Serious
 2,1,Are you an introvert or extrovert,Introvert,Exrtovert
 3,1,How close are you to your family?,Extremely Close,Dad?
 4,1,Your career is the most imporant thing in your life.,I work to live,I live to work
