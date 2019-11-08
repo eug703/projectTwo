@@ -1,12 +1,12 @@
-﻿id,survey_id,question,lower_bount_text,upper_bound_text
+id,survey_id,question,lower_bound_text,upper_bound_text
 1,1,Are you looking for something casual or serious?,Casual,Serious
-2,1,Are you an introvert or extrovert,Introvert,Exrtovert
+2,1,Are you an introvert or extrovert,Introvert,Extrovert
 3,1,How close are you to your family?,Extremely Close,Dad?
-4,1,Your career is the most imporant thing in your life.,I work to live,I live to work
-5,1,What is the ideal way to spend a night with someone?,Romantic dinner then a night in,I like us better when we're wasted
-6,1,Risk is thrilling.,Safety first,Make me feel alive
-7,1,Following trends is important.,I do my own thing,I stay up to speed
-8,1,It is funny to roast someone.,I dont want to hurt anyones feelings,I'm gonnna make you cry
-9,1,Do you think humanity will ever go extinct?,We can overcame any obstacle as a species,We're already dead in the water from our past transgressions
-10,1,Pineapple belongs on pizza.,Yuck,Yum
-11,1,Gary is #1.,I hate Gary,Gary is a god king
+4,1,Your career is the most imporant thing in your life,I work to live,I live to work
+5,1,What is the ideal way to spend a night with someone?,Romantic dinner then a night in,I like us better when we are wasted
+6,1,Risk is thrilling,Safety first,Make me feel alive
+7,1,Following trends is important,I do my own thing,I stay up to speed
+8,1,It is funny to roast someone,I dont want to hurt anyones feelings,Im gonnna make you cry
+9,1,Do you think humanity will ever go extinct?,We can overcame any obstacle as a species,We are already dead in the water from our past transgressions
+10,1,Pineapple belongs on pizza,Yuck,Yum
+11,1,Gary is #1,I hate Gary,Gary is a god king

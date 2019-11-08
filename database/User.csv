@@ -1,8 +1,8 @@
-﻿id,user_name,first_name,last_name,date_of_birth,password
-1,galmes,Gary,Almes,1/1/1918,password
-2,rnulanz,Richard,Nulanz,1/1/1990,password
-3,elee,Eugene,Lee,1/1/1996,password
-4,afomia,Afomia,K,1/1/1996,password
-5,estotz,Emma,Stotz,1/1/1996,password
-6,nhenry,Nolan,Henry,1/1/1996,password
-7,ehoversten,Erik,Hoversten,1/1/1996,password
+id,user_name,first_name,last_name,date_of_birth,password
+1,galmes,Gary,Almes,1918-01-01,password
+2,rnulanz,Richard,Nulanz,1990-01-01,password
+3,elee,Eugene,Lee,1996-01-01,password
+4,afomia,Afomia,K,1996-01-01,password
+5,estotz,Emma,Stotz,1996-01-01,password
+6,nhenry,Nolan,Henry,1996-01-01,password
+7,ehoversten,Erik,Hoversten,1996-01-01,password
