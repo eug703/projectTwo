@@ -38,3 +38,4 @@ Date Night
 * NPMs: express, express-handlebars, mysql, sequelize, sequelize-cli
 * MySQL
 * Figma
+* Animate.CSS
