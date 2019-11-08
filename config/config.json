@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Natu123@",
+=======
+    "password": "root",
+>>>>>>> 304854ab3547f783d13fcfa283e27ab81e53c69e
     "database": "dateNight_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
