@@ -43,6 +43,9 @@ app.get("/signup", function(req, res){
 app.get("/survey", function(req, res){
     res.render('survey')
 })
+app.get("/dashboard", function(req, res){
+    res.render('dashboard')
+})
 
 
 // Create a user
