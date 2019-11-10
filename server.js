@@ -27,12 +27,14 @@ app.use(express.static("public"));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.get("/", function(req, res){
-    res.render('landing')
-})
+    res.render('landing');
+});
 // Routes
 // =============================================================
 // require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
+
 
 
 // Syncing our sequelize models and then starting our Express app
