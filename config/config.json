@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Natu123@",
-    "database": "dateNight_db",
+    "password": "root",
+    "database": "datenight_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

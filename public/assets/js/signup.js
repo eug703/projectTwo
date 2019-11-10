@@ -7,22 +7,16 @@ $(document).ready(function(){
         else 
             return false;
     };
-
     // A function for generating a post method to a user
     function postUser(userData) {
-        try{
             $.post("/api/user", userData)
             .then(function(error, result){
                 // console.log("User has been created succesfully ! ");
                 // console.log(result);
-                console.log(error);
-                console.log(result);
+                window.location.href="/";
             });
-        } catch(err){
-            console.log("I am here at the error on the client side!");
-        };        
+      
     };
-
     //Handles the sign-up validation
     function handleSignUp(){
         console.log("I am here to sign up !");
@@ -32,7 +26,6 @@ $(document).ready(function(){
         var passwordInput = $("#password").val().trim();
         var passwordCheckInput = $("#confirm-password").val().trim();
         var dateOfBirth = $("#date-of-birth").val().trim();
-
         if(passwordValid(passwordInput,passwordCheckInput)){
                 var usernameEntered = $("#user-name").val().trim();
                 console.log("I am here at the password valid field !");
@@ -48,12 +41,11 @@ $(document).ready(function(){
                     console.log("I am user-name");
                     console.log(user);
                     postUser(user);                    
-                    window.location.href="../index.html";
+                    // window.location.replace('/');
         }else{
             $(".signup-validation").text("The Password entered does not match the confirm password.");
         };
     };
-
     $("#user-signup").on("click", function(){
         event.preventDefault();
         handleSignUp();
