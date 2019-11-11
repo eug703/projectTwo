@@ -12,7 +12,7 @@ app.get("/api/login/:username",function(req,res){
 // all surveys
 app.get("/api/survey", function(req, res){
     db.Survey.findAll({}).then(function(data){
-        res.json(data)
+        res.json(data);
     });
 });
 // specific survey by id
@@ -68,6 +68,15 @@ app.get("/api/surveyquestions/:surveyId", function(req,res){
     db.Survey_Questions.findAll({
         where: {SurveyId: req.params.surveyId}
     }).then(function(data){
+        res.json(data);
+    });
+});
+// Route for getting survey answers
+app.get("/api/surveyanswers/:userId", function(req,res){
+    db.Survey_Answers.findAll({
+        where : {UserId: req.params.userId}
+    })
+    .then(function(data){
         res.json(data);
     });
 });
