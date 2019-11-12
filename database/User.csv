@@ -1,4 +1,4 @@
-﻿id,user_name,first_name,last_name,date_of_birth,password,gender,gender-preference,image-link,bio
+id,user_name,first_name,last_name,date_of_birth,password,gender,gender-preference,image-link,bio
 1,galmes,Gary,Almes,1/1/1918,password,male,female,,Hello I'm Gary and I like to party
 2,rnulanz,Richard,Nulanz,1/1/1990,password,male,female,,Hello I'm Richard and I like to party
 3,elee,Eugene,Lee,1/1/1996,password,male,female,,Hello I'm Eugene and I like to party

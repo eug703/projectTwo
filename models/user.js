@@ -13,23 +13,11 @@ module.exports = function(sequelize, DataType){
         },
         first_name:{
             type: DataType.STRING,
-            allowNull: false,
-            validate: {
-                is:{
-                    args: ["^[a-z]+$",'i'],
-                    msg: "Must be only letters"
-                }
-            }
+            allowNull: false
         },
         last_name: {
             type: DataType.STRING,
-            allowNull: false,
-            validate: {
-                is:{
-                    args: ["^[a-z]+$",'i'],
-                    msg: "Must be only numbers"
-                }
-            }
+            allowNull: false
         },
         password: {
             type: DataType.STRING,
@@ -49,3 +37,18 @@ module.exports = function(sequelize, DataType){
 
     return User;
 };
+
+// validate: {
+//     is:{
+//         args: ["^[a-z]+$",'i'],
+//         msg: "Must be only letters"
+//     }
+// }
+
+// ,
+// validate: {
+//     is:{
+//         args: ["^[a-z]+$",'i'],
+//         msg: "Must be only numbers"
+//     }
+// }

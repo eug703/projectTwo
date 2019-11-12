@@ -9,6 +9,14 @@ module.exports = function(sequelize, DataType){
         question:{
             type: DataType.STRING,
             allowNull: false
+        },
+        lowerbound_answer_value:{
+            type: DataType.STRING,
+            allowNull: true
+        },
+        upperbound_answer_value:{
+            type: DataType.STRING,
+            allowNull: true
         }
     });
 
